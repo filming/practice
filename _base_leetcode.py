@@ -4,13 +4,17 @@ from typing import *
 
 ''' Solutions 
 
-Solution #1
+[ Solution #1 ]
+
 Time Complexity:
 - 
+
 Space Complexity:
 - 
+
 Approach:
 - 
+
 Notes:
 - 
 
