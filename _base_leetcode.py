@@ -2,15 +2,18 @@ from typing import *
 
 # LINK
 
-''' Notes
-
-'''
-
-''' Complexities 
+''' Solutions 
 
 Solution #1
-Time Complexity: 
+Time Complexity:
+- 
 Space Complexity:
+- 
+Approach:
+- 
+Notes:
+- 
+
 '''
 
 class Solution:
