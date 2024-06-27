@@ -7,14 +7,16 @@ from typing import *
 [ Solution #1 ]
 
 Time Complexity:
-- O(k(n log n))
-- k is the length of the total amount of strings in strs
-- n is the length of a string in strs
+- O(n(k log k))
+- n is the total amount of strings in strs
+- k is the maximum length of a string in strs
 - Iterating over each string in strs has a TC of O(n) 
 - Sorting a string using TimSort has a TC of O(n log n)
 
 Space Complexity:
-- O(n)
+- O(n*k)
+- n is the total amount of strings in our return value
+- k is the maximum length of a string in our return value
 - In the worst case, when sorting and comparing, we can find no common sorted anagrams which means our grouped_anagrams hashmap will have the same number of elements as the given strs list.
 - We will need to create a new string after each iteration of our loop, which will be a O(n) operation.
 
@@ -33,7 +35,7 @@ Notes:
 Time Complexity:
 - O(n * k)
 - n is the total amount of strings in strs
-- k is the average length of a string in strs
+- k is the maximum length of a string in strs
 - Iterating over each string in strs is O(n).
 - Creating a char occurrence list of a string is O(n).
 - Converting a list of ints to a tuple of ints is O(n).
@@ -41,11 +43,8 @@ Time Complexity:
 
 Space Complexity:
 - O(n * k)
-- n is the total amount of strings in strs
-- k is the average length of a string in strs
-- Creating a char occurrence list of a string is O(n).
-- Converting a list of ints to a tuple of ints is O(n).
-- In the worst case, when comparing, we can find no common sorted anagrams which means our grouped_anagrams hashmap will have the same number of elements as the given strs list. O(n)
+- n is the total amount of strings in our return value
+- k is the maximum length of a string in our return value
 
 Approach:
 - Create a hashmap that will store our grouped anagrams (call it grouped_anagrams). A string containing the sorted characters of an anagram will be the key and the associated value being a list containing strings that if sorted, would yield the same string as the key. Initialize this hashmap as empty.
